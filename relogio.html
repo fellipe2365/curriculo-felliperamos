@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Relógio</title>
+</head>
+<body>
+ <span id="dataVisita"> Horário 00h : 00min : 00</span>
+    <script>
+
+    	function moveRelogio(){
+			var dA = new Date();
+			var h = dA.getHours();
+			var m = dA.getMinutes();
+			var s = dA.getSeconds();
+			document.getElementById("dataVisita").innerHTML = " Horário " + h + "h : " + m + "min : " + s;
+			setTimeout("moveRelogio()",1000);
+		}
+
+		window.onload = function(){
+			moveRelogio();
+		}
+    </script>
+</body>
+</html>
